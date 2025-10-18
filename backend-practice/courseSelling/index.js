@@ -9,7 +9,7 @@ const userRoutes = require("./routes/user.js");
 app.use(express.json());
 mongoose
   .connect(
-    "mongodb+srv://cephajj:7Kgxdo0zHxY5dviT@cluster0.ray64mt.mongodb.net/Auth_API"
+    "MONOG_URL"
   )
   .then(() => {
     console.log("connected");
@@ -35,6 +35,5 @@ app.use((err, req, res, next) => {
 });
 
 app.listen(3000);
-//68f3052d08d1a4a2740ae8d3
-//68f3055108d1a4a2740ae8dc
-//68f3056208d1a4a2740ae8e2
+
+
