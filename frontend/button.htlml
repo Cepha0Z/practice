@@ -1,0 +1,30 @@
+<html>
+  <body>
+    <div id="space"></div>
+    <script>
+      let state = {
+        count: 0,
+      };
+
+      function update() {
+        state.count++;
+        rerender();
+      }
+
+      function rerender() {
+        document.getElementById("space").innerHTML = "";
+        const component = buttoncreation(state.count);
+        console.log(component);
+        document.getElementById("space").appendChild(component);
+      }
+
+      function buttoncreation(count) {
+        const button = document.createElement("button");
+        button.innerHTML = count;
+        button.setAttribute("onclick", "update()");
+        return button;
+      }
+      rerender();
+    </script>
+  </body>
+</html>
